@@ -1,0 +1,87 @@
+.app-sidebar-img {
+    margin-right: 32px;
+}
+
+.app-sidebar-note button {
+    color: crimson;
+  }
+  .app-sidebar-note p {
+    margin: 10px 0;
+  }
+  .app-sidebar-note small {
+    display: block;
+    color: #999;
+  }
+  
+  .app-sidebar-note:hover {
+    background: #ddd;
+  }
+  .app-sidebar-note.active,
+  .app-sidebar-note.active small {
+    background: #EDE1FA;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+.app-sidebar-left {
+    display: flex;
+    align-items: center;
+}
+
+.app-sidebar-right {
+    display: flex;
+    align-items: center;
+}
+
+.note-meta {
+    margin-right: 20px;
+}
+
+.app-sidebar-img-delete {
+    margin-top: 3px;
+}
+
+.sidebar-note-title strong {
+    font-family: 'InterRegular';
+}
+
+.app-sidebar-header button{
+    color: var(--text-grey838);
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.app-sidebar-add-button {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 15px 25px 15px 25px;
+    cursor: pointer;
+}
+
+.app-sidebar-add-button img {
+    margin-right: 25px;
+}
+
+.app-sidebar-add-button:hover {
+    background: #ddd;
+}
+
+.app-sidebar-notes {
+    height: calc(100vh - 78px);
+    overflow-y: auto;
+  }
+  .app-sidebar-note {
+    padding: 15px 25px 15px 25px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+  }
+  .sidebar-note-title {
+    display: flex;
+    justify-content: space-between;
+  }
