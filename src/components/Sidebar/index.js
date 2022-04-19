@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles.css';
+import './Sidebar.styles.css';
 
 function Sidebar({
   notes,
@@ -28,7 +28,7 @@ function Sidebar({
             aria-hidden="true"
           >
             <div className="app-sidebar-left">
-              <img className="app-sidebar-img" src={require('../assets/icons/folder.png')} alt="folder" />
+              <img className="app-sidebar-img" src={require('../../assets/icons/folder.png')} alt="folder" />
               <div className="sidebar-note-title">
                 <strong>{title}</strong>
 
@@ -46,7 +46,7 @@ function Sidebar({
                 })}
               </small>
               <button type="button" onClick={() => onDeleteNote(id)}>
-                <img className="app-sidebar-img-delete" src={require('../assets/icons/backet.png')} alt="folder" />
+                <img className="app-sidebar-img-delete" src={require('../../assets/icons/backet.png')} alt="folder" />
               </button>
             </div>
 
@@ -54,7 +54,7 @@ function Sidebar({
         ))}
         <div aria-hidden="true" onKeyDown={onAddNote} onClick={onAddNote} className="app-sidebar-add-button">
 
-          <img className="app-sidebar-img-delete" src={require('../assets/icons/plus.png')} alt="folder" />
+          <img className="app-sidebar-img-delete" src={require('../../assets/icons/folder.png')} alt="folder" />
           <span>New template</span>
         </div>
       </div>

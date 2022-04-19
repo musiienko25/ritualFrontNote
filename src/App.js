@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import uuid from 'react-uuid';
 import './App.css';
-import Sidebar from './Sidebar/Sidebar';
-import Main from './Main';
-import Search from './Search/Search';
+import Sidebar from './components/Sidebar';
+import Main from './components/Main';
+import Search from './components/Search';
 
 function App() {
   const [notes, setNotes] = useState([]);

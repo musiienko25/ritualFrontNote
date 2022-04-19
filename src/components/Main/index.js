@@ -1,3 +1,5 @@
+import './Main.styles.css';
+
 function Main({ activeNote, onUpdateNote }) {
   const onEditField = (field, value) => {
     onUpdateNote({
