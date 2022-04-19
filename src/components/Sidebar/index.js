@@ -5,7 +5,7 @@ import folder from '../../assets/icons/folder.png';
 import backet from '../../assets/icons/backet.png';
 import { options } from '../../utils/options';
 
-export default function Sidebar({
+export function Sidebar({
   notes,
   onAddNote,
   onDeleteNote,

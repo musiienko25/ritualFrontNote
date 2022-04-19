@@ -1,6 +1,6 @@
 import './NoteView.styles.css';
 
-export default function NoteView({ activeNote, onUpdateNote }) {
+export function NoteView({ activeNote, onUpdateNote }) {
   const onEditField = (field, value) => {
     onUpdateNote({
       ...activeNote,

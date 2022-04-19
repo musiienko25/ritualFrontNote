@@ -1,9 +1,9 @@
 import React, { useCallback, useState, useMemo } from 'react';
 import uuid from 'react-uuid';
 import './App.css';
-import Sidebar from './components/Sidebar';
-import NoteView from './components/NoteView';
-import Search from './components/Search';
+import { Sidebar } from './components/Sidebar';
+import { NoteView } from './components/NoteView';
+import { Search } from './components/Search';
 
 function App() {
   const [notes, setNotes] = useState([]);
