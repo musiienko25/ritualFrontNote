@@ -1,6 +1,6 @@
-import './Main.styles.css';
+import './NoteView.styles.css';
 
-export default function Main({ activeNote, onUpdateNote }) {
+export default function NoteView({ activeNote, onUpdateNote }) {
   const onEditField = (field, value) => {
     onUpdateNote({
       ...activeNote,
@@ -13,6 +13,7 @@ export default function Main({ activeNote, onUpdateNote }) {
 
   return (
     <div className="app-main">
+      <div className="app-main-header">You’re editing a new template</div>
       <div className="app-main-note-edit">
         <input
           className="app-main-note-edit-input"

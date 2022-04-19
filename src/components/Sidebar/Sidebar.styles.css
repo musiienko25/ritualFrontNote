@@ -1,24 +1,26 @@
+@import '../../variables.css';
+
 .app-sidebar-img {
-    margin-right: 32px;
+    margin-right: 20px;
 }
 
 .app-sidebar-note button {
-    color: crimson;
+    color: var(--buttondc1);
   }
   .app-sidebar-note p {
     margin: 10px 0;
   }
   .app-sidebar-note small {
     display: block;
-    color: #999;
+    color: var(--background-grey999);
   }
   
   .app-sidebar-note:hover {
-    background: #ddd;
-  }
+    background: var(--background-greyddd);
+  } 
   .app-sidebar-note.active,
   .app-sidebar-note.active small {
-    background: #EDE1FA;
+    background: var(--background-greyEDE);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -36,6 +38,20 @@
 
 .note-meta {
     margin-right: 20px;
+    font-size: 14px;
+}
+
+.app-sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px;
+  font-family: 'Inter';
+  color: #83898D;
+  font-weight: 600;
+}
+
+.app-sidebar-header h1 {
+  margin: 0;
 }
 
 .app-sidebar-img-delete {
@@ -43,7 +59,9 @@
 }
 
 .sidebar-note-title strong {
-    font-family: 'InterRegular';
+    font-family: 'Inter';
+    font-size: 14px;
+    color: #1D1C1D;
 }
 
 .app-sidebar-header button{
@@ -57,7 +75,7 @@
 
 .app-sidebar-add-button {
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
     padding: 15px 25px 15px 25px;
     cursor: pointer;
@@ -68,7 +86,14 @@
 }
 
 .app-sidebar-add-button:hover {
-    background: #ddd;
+    background: var(--background-greyddd);
+}
+
+.app-sidebar-add-button span {
+    font-family: 'Inter';
+    font-size: 16px;
+    text-decoration: underline;
+    font-weight: bold;
 }
 
 .app-sidebar-notes {
@@ -77,6 +102,7 @@
   }
   .app-sidebar-note {
     padding: 15px 25px 15px 25px;
+    font-family: 'Inter';
     cursor: pointer;
     display: flex;
     justify-content: space-between;

@@ -2,6 +2,9 @@
 
 @import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css");
 
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+
 @font-face {
   font-family: 'InterRegular';
   src: local('Inter-Regular'), url(./assets/fonts/Inter/Inter-Regular.ttf) format('ttf');
@@ -10,8 +13,6 @@
 * {
   box-sizing: border-box;
 }
-
-/* GLOBAL STYLES */
 
 .app-note {
   display: flex;
@@ -24,7 +25,6 @@ body,
   height: 100vh;
   overflow: hidden;
   font-size: 16px;
-  background: url(https://www.toptal.com/designers/subtlepatterns/patterns/lightpaperfibers.png);
 }
 
 button {
@@ -45,24 +45,13 @@ button:hover {
   display: flex;
 }
 
-/* SIDEBAR STYLES */
-
 .app-sidebar {
   width: 35%;
   height: 100vh;
   border-right: 1px solid #ddd;
 }
 
-.app-sidebar-header {
-  display: flex;
-  justify-content: space-between;
-  padding: 25px;
 
-
-}
-.app-sidebar-header h1 {
-  margin: 0;
-}
 
 .no-active-note {
   width: 70%;

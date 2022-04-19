@@ -1,3 +1,5 @@
+@import '../../variables.css';
+
 .app-main-note-edit {
     padding: 25px;
   }
@@ -36,12 +38,11 @@
     height: 50px;
     font-size: 2rem;
   }
-  
-  /* Preview */
+
   .app-main-note-preview {
-    border-top: 1px solid #ddd;
+    border-top: 1px solid var(--background-greyddd);
     overflow-y: scroll;
-    background: rgba(0, 0, 0, 0.02);
+    background: var(--background-grey000);
   }
 
   .app-main {
@@ -51,4 +52,17 @@
   .app-main-note-edit,
   .app-main-note-preview {
     height: 50vh;
+  }
+
+  .app-main-header {
+    background: #EDE1FA;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 37px;
+    color: #000000;
   }

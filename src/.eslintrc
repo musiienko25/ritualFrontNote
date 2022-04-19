@@ -4,7 +4,8 @@
         "react/prop-types": "off",
         "react/react-in-jsx-scope": "off",
         "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-        "global-require": 0
+        "global-require": 0,
+        "max-len": ["error", { "code": 160 }]
       }
 }
 

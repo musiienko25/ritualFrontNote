@@ -1,5 +1,7 @@
+@import '../../variables.css';
+
 .search input {
-    border: 1px solid grey;
+    border: 1px solid var(--background-grey808);
     margin: 10px;
     border-radius: 3px;
     padding-left: 5px;

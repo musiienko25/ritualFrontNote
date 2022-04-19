@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useCallback, useState, useMemo } from 'react';
 import uuid from 'react-uuid';
 import './App.css';
 import Sidebar from './components/Sidebar';
-import Main from './components/Main';
+import NoteView from './components/NoteView';
 import Search from './components/Search';
 
 function App() {
@@ -18,14 +18,14 @@ function App() {
       lastModified: Date.now(),
     };
 
-    setNotes([newNote, ...notes]);
+    setNotes((prev) => [newNote, ...prev]);
   };
 
   const onDeleteNote = (idToDelete) => {
     setNotes(notes.filter((note) => note.id !== idToDelete));
   };
 
-  const getActiveNote = () => notes.find((note) => note.id === activeNote);
+  const getActiveNote = useCallback(() => notes.find((note) => note.id === activeNote), [activeNote, notes]);
 
   const onUpdateNote = (updateNote) => {
     const updatedNotesArray = notes.map((note) => {
@@ -44,13 +44,13 @@ function App() {
       <Search handleSearchNote={setSearchText} />
       <div className="App">
         <Sidebar
-          notes={notes.filter((note) => note.title.toLowerCase().includes(searchText))}
+          notes={useMemo(() => (searchText ? notes.filter((note) => note.title.toLowerCase().includes(searchText.toLowerCase())) : notes), [notes, searchText])}
           onAddNote={onAddNote}
           onDeleteNote={onDeleteNote}
           activeNote={activeNote}
           setActiveNote={setActiveNote}
         />
-        <Main activeNote={getActiveNote()} onUpdateNote={onUpdateNote} />
+        <NoteView activeNote={getActiveNote()} onUpdateNote={onUpdateNote} />
       </div>
     </>
   );
