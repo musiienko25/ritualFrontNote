@@ -2,6 +2,7 @@
 
 .app-main-note-edit {
     padding: 25px;
+    
   }
   
   .app-main-note-edit input,
@@ -37,6 +38,7 @@
   .app-main-note-edit input {
     height: 50px;
     font-size: 2rem;
+    border-bottom: 1px solid #F2F2F2;
   }
 
   .app-main-note-preview {
