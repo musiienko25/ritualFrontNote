@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: 'InterRegular';
-  src: local('Inter-Regular'), url(./src/fonts/Inter/Inter-Regular.ttf) format('ttf');
+  src: local('Inter-Regular'), url(./assets/fonts/Inter/Inter-Regular.ttf) format('ttf');
 }
 
 * {
@@ -65,42 +65,6 @@ button:hover {
 .app-sidebar-header h1 {
   margin: 0;
 }
-
-/* .app-sidebar-notes {
-  height: calc(100vh - 78px);
-  overflow-y: auto;
-}
-.app-sidebar-note {
-  padding: 25px;
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-}
-.sidebar-note-title {
-  display: flex;
-  justify-content: space-between;
-}
-.app-sidebar-note button {
-  color: crimson;
-}
-.app-sidebar-note p {
-  margin: 10px 0;
-}
-.app-sidebar-note small {
-  display: block;
-  color: #999;
-}
-
-.app-sidebar-note:hover {
-  background: #ddd;
-}
-.app-sidebar-note.active,
-.app-sidebar-note.active small {
-  background: #EDE1FA;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-} */
 
 /* NOTE EDITOR/PREVIEW (MAIN) STYLES */
 
