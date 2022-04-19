@@ -1,6 +1,6 @@
 import './Main.styles.css';
 
-function Main({ activeNote, onUpdateNote }) {
+export default function Main({ activeNote, onUpdateNote }) {
   const onEditField = (field, value) => {
     onUpdateNote({
       ...activeNote,
@@ -33,5 +33,3 @@ function Main({ activeNote, onUpdateNote }) {
     </div>
   );
 }
-
-export default Main;

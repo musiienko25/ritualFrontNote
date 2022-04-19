@@ -1,7 +1,7 @@
 import React from 'react';
 import './Sidebar.styles.css';
 
-function Sidebar({
+export default function Sidebar({
   notes,
   onAddNote,
   onDeleteNote,
@@ -61,5 +61,3 @@ function Sidebar({
     </div>
   );
 }
-
-export default Sidebar;
