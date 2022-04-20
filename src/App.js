@@ -7,7 +7,7 @@ import { Search } from './components/Search';
 
 function App() {
   const [notes, setNotes] = useState([]);
-  const [activeNote, setActiveNote] = useState(false);
+  const [activeNote, setActiveNote] = useState(null);
   const [searchText, setSearchText] = useState('');
 
   const onAddNote = () => {
@@ -25,7 +25,12 @@ function App() {
     setNotes(notes.filter((note) => note.id !== idToDelete));
   };
 
-  const getActiveNote = useCallback(() => notes.find((note) => note.id === activeNote), [activeNote, notes]);
+  const filteredNotes = useMemo(() => (searchText ? notes
+    .filter((note) => note.title.toLowerCase().includes(searchText.toLowerCase())) : notes)
+    .sort((a, b) => b.lastModified - a.lastModified), [notes, searchText]);
+
+  const getActiveNote = useCallback(() => notes
+    .find((note) => note.id === activeNote), [activeNote, notes]);
 
   const onUpdateNote = (updateNote) => {
     const updatedNotesArray = notes.map((note) => {
@@ -44,7 +49,7 @@ function App() {
       <Search handleSearchNote={setSearchText} />
       <div className="App">
         <Sidebar
-          notes={useMemo(() => (searchText ? notes.filter((note) => note.title.toLowerCase().includes(searchText.toLowerCase())) : notes), [notes, searchText])}
+          notes={filteredNotes}
           onAddNote={onAddNote}
           onDeleteNote={onDeleteNote}
           activeNote={activeNote}
