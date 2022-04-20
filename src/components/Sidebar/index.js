@@ -1,9 +1,9 @@
-import React, { useMemo } from 'react';
+import React from 'react';
 import './Sidebar.styles.css';
 import plus from '../../assets/icons/plus.png';
 import folder from '../../assets/icons/folder.png';
 import backet from '../../assets/icons/backet.png';
-import { options } from '../../utils/options';
+import { formattedDate } from '../../utils/dates';
 
 export function Sidebar({
   notes,
@@ -12,8 +12,6 @@ export function Sidebar({
   activeNote,
   setActiveNote,
 }) {
-  const sortedNotes = useMemo(() => notes.sort((a, b) => b.lastModified - a.lastModified), [notes]);
-
   return (
     <div className="app-sidebar">
       <div className="app-sidebar-header">
@@ -22,7 +20,7 @@ export function Sidebar({
       </div>
       <div className="app-sidebar-notes">
 
-        {sortedNotes.map(({
+        {notes.map(({
           id, title, lastModified,
         }) => (
 
@@ -41,7 +39,12 @@ export function Sidebar({
 
             <div className="app-sidebar-right">
               <small className="note-meta">
-                {new Date(lastModified).toLocaleDateString('en-GB', options)}
+                {formattedDate(lastModified, 'en-GB', {
+                  year: '2-digit',
+                  month: 'short',
+                  hour: '2-digit',
+                  minute: '2-digit',
+                })}
               </small>
               <button type="button" onClick={() => onDeleteNote(id)}>
                 <img className="app-sidebar-img-delete" src={backet} alt="folder" />
